@@ -1,10 +1,8 @@
 # Hollow inverted pyramid
-n = 6
-for i in range(n, 0, -1):
-    if i==n:
-        print("* " * (2 * n - 1))
-    elif i==1:
-        print(" " * (n - 1) + "*")
+n = 5
+for i in range(n):
+    print(' '* i, end='')
+    if i == 0 or i == n - 1:
+        print('* ' * (n - i))
     else:
-        inner=" " * (2 * i - 3)
-        print(" " * (n - i) + "*" + inner + "*")
+        print('* ' + '  ' * (n - i - 2) + '*')
